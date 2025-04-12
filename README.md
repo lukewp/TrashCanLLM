@@ -306,6 +306,7 @@ I think this means it's going to use disk swap for context until I drop the cont
 To run a Llama 4 server accessible to your local network on port 80 (i.e., responding to OpenAI API calls from programs like Cursor for which you can't set a port) and hold VRAM space and GPU bandwidth to run other models in parallel using the GPU, try the following:
 ```
 ./build/bin/llama-server -m ../llm-models/Llama-4-Scout-17B-16E-Instruct-UD-Q2_K_XL.gguf \
+    -nkvo \
     --threads 10 \
     --ctx-size 65536 \
     --n-gpu-layers 0 \
